@@ -5,7 +5,4 @@
     <orderEntry type="jdk" jdkName="f-recommend" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="e72b2ec3-34a4-45bc-90d3-05a2be75a82a" />
-  </component>
 </module>
