@@ -23,52 +23,15 @@ class VectorDatabaseConstants(Enum):
     top_k = 1000
 
 class Choices(Enum):
-    gender = ['Unisex', 'Men', 'Women', 'Boys', 'Girls']
-
+    gender = ['Men', 'Women', 'Boys', 'Girls', 'Unisex']
     category = ['Apparel', 'Accessories', 'Footwear', 'Personal Care', 'Free Items', 'Sporting Goods', 'Home']
-
-    sub_category = ['Topwear', 'Bottomwear', 'Watches', 'Socks', 'Shoes', 'Belts', 'Flip Flops',
-                    'Bags', 'Innerwear', 'Sandal', 'Shoe Accessories', 'Fragrance', 'Jewellery',
-                    'Lips', 'Saree', 'Eyewear', 'Nails', 'Scarves', 'Dress',
-                    'Loungewear and Nightwear', 'Wallets', 'Apparel Set', 'Headwear', 'Mufflers',
-                    'Skin Care', 'Makeup', 'Free Gifts', 'Ties', 'Accessories', 'Skin',
-                    'Beauty Accessories', 'Water Bottle', 'Eyes', 'Bath and Body', 'Gloves',
-                    'Sports Accessories', 'Cufflinks', 'Sports Equipment', 'Stoles', 'Hair',
-                    'Perfumes', 'Home Furnishing', 'Umbrellas', 'Wristbands', 'Vouchers']
-
-    article_type = ['Shirts', 'Jeans', 'Watches', 'Track Pants', 'Tshirts', 'Socks', 'Casual Shoes',
-                    'Belts', 'Flip Flops', 'Handbags', 'Tops', 'Bra', 'Sandals', 'Shoe Accessories',
-                    'Sweatshirts', 'Deodorant', 'Formal Shoes', 'Bracelet', 'Lipstick', 'Flats',
-                    'Kurtas', 'Waistcoat', 'Sports Shoes', 'Shorts', 'Briefs', 'Sarees',
-                    'Perfume and Body Mist', 'Heels', 'Sunglasses', 'Innerwear Vests', 'Pendant',
-                    'Nail Polish', 'Laptop Bag', 'Scarves', 'Rain Jacket', 'Dresses',
-                    'Night suits', 'Skirts', 'Wallets', 'Blazers', 'Ring', 'Kurta Sets', 'Clutches',
-                    'Shrug', 'Backpacks', 'Caps', 'Trousers', 'Earrings', 'Camisoles', 'Boxers',
-                    'Jewellery Set', 'Dupatta', 'Capris', 'Lip Gloss', 'Bath Robe', 'Mufflers',
-                    'Tunics', 'Jackets', 'Trunk', 'Lounge Pants', 'Face Wash and Cleanser',
-                    'Necklace and Chains', 'Duffel Bag', 'Sports Sandals',
-                    'Foundation and Primer', 'Sweaters', 'Free Gifts', 'Trolley Bag',
-                    'Tracksuits', 'Swimwear', 'Shoe Laces', 'Fragrance Gift Set', 'Bangle',
-                    'Nightdress', 'Ties', 'Baby Dolls', 'Leggings', 'Highlighter and Blush',
-                    'Travel Accessory', 'Kurtis', 'Mobile Pouch', 'Messenger Bag', 'Lip Care',
-                    'Face Moisturisers', 'Compact', 'Eye Cream', 'Accessory Gift Set',
-                    'Beauty Accessory', 'Jumpsuit', 'Kajal and Eyeliner', 'Water Bottle',
-                    'Suspenders', 'Lip Liner', 'Robe', 'Salwar and Dupatta', 'Patiala',
-                    'Stockings', 'Eyeshadow', 'Headband', 'Tights', 'Nail Essentials', 'Churidar',
-                    'Lounge Tshirts', 'Face Scrub and Exfoliator', 'Lounge Shorts', 'Gloves',
-                    'Mask and Peel', 'Wristbands', 'Tablet Sleeve', 'Ties and Cufflinks',
-                    'Footballs', 'Stoles', 'Shapewear', 'Nehru Jackets', 'Salwar', 'Cufflinks',
-                    'Jeggings', 'Hair Colour', 'Concealer', 'Rompers', 'Body Lotion', 'Sunscreen',
-                    'Booties', 'Waist Pouch', 'Hair Accessory', 'Rucksacks', 'Basketballs',
-                    'Lehenga Choli', 'Clothing Set', 'Mascara', 'Toner', 'Cushion Covers',
-                    'Key chain', 'Makeup Remover', 'Lip Plumper', 'Umbrellas',
-                    'Face Serum and Gel', 'Hat', 'Mens Grooming Kit', 'Rain Trousers',
-                    'Body Wash and Scrub', 'Suits', 'Ipad']
-
-
-
+    sub_category = ['Topwear', 'Bottomwear', 'Watches', 'Socks', 'Shoes', 'Belts', 'Flip Flops', 'Bags', 'Innerwear', 'Sandal', 'Shoe Accessories', 'Fragrance', 'Jewellery', 'Lips', 'Saree', 'Eyewear', 'Nails', 'Scarves', 'Dress', 'Loungewear and Nightwear', 'Wallets', 'Apparel Set', 'Headwear', 'Mufflers', 'Skin Care', 'Makeup', 'Free Gifts', 'Ties', 'Accessories', 'Skin', 'Beauty Accessories', 'Water Bottle', 'Eyes', 'Bath and Body', 'Gloves', 'Sports Accessories', 'Cufflinks', 'Sports Equipment', 'Stoles', 'Hair', 'Perfumes', 'Home Furnishing', 'Umbrellas', 'Wristbands', 'Vouchers']
+    article_type = ['Shirts', 'Jeans', 'Watches', 'Track Pants', 'Tshirts', 'Socks', 'Casual Shoes', 'Belts', 'Flip Flops', 'Handbags', 'Tops', 'Bra', 'Sandals', 'Shoe Accessories', 'Sweatshirts', 'Deodorant', 'Formal Shoes', 'Bracelet', 'Lipstick', 'Flats', 'Kurtas', 'Waistcoat', 'Sports Shoes', 'Shorts', 'Briefs', 'Sarees', 'Perfume and Body Mist', 'Heels', 'Sunglasses', 'Innerwear Vests', 'Pendant', 'Nail Polish', 'Laptop Bag', 'Scarves', 'Rain Jacket', 'Dresses', 'Night suits', 'Skirts', 'Wallets', 'Blazers', 'Ring', 'Kurta Sets', 'Clutches', 'Shrug', 'Backpacks', 'Caps', 'Trousers', 'Earrings', 'Camisoles', 'Boxers', 'Jewellery Set', 'Dupatta', 'Capris', 'Lip Gloss', 'Bath Robe', 'Mufflers', 'Tunics', 'Jackets', 'Trunk', 'Lounge Pants', 'Face Wash and Cleanser', 'Necklace and Chains', 'Duffel Bag', 'Sports Sandals', 'Foundation and Primer', 'Sweaters', 'Free Gifts', 'Trolley Bag', 'Tracksuits', 'Swimwear', 'Shoe Laces', 'Fragrance Gift Set', 'Bangle', 'Nightdress', 'Ties', 'Baby Dolls', 'Leggings', 'Highlighter and Blush', 'Travel Accessory', 'Kurtis', 'Mobile Pouch', 'Messenger Bag', 'Lip Care', 'Face Moisturisers', 'Compact', 'Eye Cream', 'Accessory Gift Set', 'Beauty Accessory', 'Jumpsuit', 'Kajal and Eyeliner', 'Water Bottle', 'Suspenders', 'Lip Liner', 'Robe', 'Salwar and Dupatta', 'Patiala', 'Stockings', 'Eyeshadow', 'Headband', 'Tights', 'Nail Essentials', 'Churidar', 'Lounge Tshirts', 'Face Scrub and Exfoliator', 'Lounge Shorts', 'Gloves', 'Mask and Peel', 'Wristbands', 'Tablet Sleeve', 'Ties and Cufflinks', 'Footballs', 'Stoles', 'Shapewear', 'Nehru Jackets', 'Salwar', 'Cufflinks', 'Jeggings', 'Hair Colour', 'Concealer', 'Rompers', 'Body Lotion', 'Sunscreen', 'Booties', 'Waist Pouch', 'Hair Accessory', 'Rucksacks', 'Basketballs', 'Lehenga Choli', 'Clothing Set', 'Mascara', 'Toner', 'Cushion Covers', 'Key chain', 'Makeup Remover', 'Lip Plumper', 'Umbrellas', 'Face Serum and Gel', 'Hat', 'Mens Grooming Kit', 'Rain Trousers', 'Body Wash and Scrub', 'Suits', 'Ipad']
+    base_color = ['Navy Blue', 'Blue', 'Silver', 'Black', 'Grey', 'Green', 'Purple', 'White', 'Beige', 'Brown', 'Bronze', 'Teal', 'Copper', 'Pink', 'Off White', 'Maroon', 'Red', 'Khaki', 'Orange', 'Coffee Brown', 'Yellow', 'Charcoal', 'Gold', 'Steel', 'Tan', 'Multi', 'Magenta', 'Lavender', 'Sea Green', 'Cream', 'Peach', 'Olive', 'Skin', 'Burgundy', 'Grey Melange', 'Rust', 'Rose', 'Lime Green', 'Mauve', 'Turquoise Blue', 'Metallic', 'Mustard', 'Taupe', 'Nude', 'Mushroom Brown', 'Fluorescent Green']
+    #season
+    year = [2011.0, 2012.0, 2016.0, 2017.0, 2015.0, 2014.0, 2010.0, 2013.0, 2018.0, 2019.0, 2007.0, 2009.0, 2008.0, ]
     usage = ['Casual', 'Ethnic', 'Formal', 'Sports', 'Smart Casual', 'Travel', 'Party', 'Home']
-
+    #search
     @classmethod
     def get_seasons(self):
         now = datetime.now()

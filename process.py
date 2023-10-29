@@ -16,5 +16,5 @@ data_frame.to_csv(f"data/sample_{data_to_insert}_items.csv")
 df = data_frame
 op_columns = ["id","metadata","text_content"]
 list_of_rows = [row[op_columns].to_dict() for _, row in df.iterrows()]
-
+print(list_of_rows)
 pinecone.upsert_documents(documents=list_of_rows)

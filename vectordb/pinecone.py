@@ -76,7 +76,7 @@ class CustomPinecone(Pinecone):
             relevant_documents = self._format_fetch(response)
         else:
             relevant_documents = self.similarity_search(query, top_k)
-        return self._clean_metadata(relevant_documents)
+        return relevant_documents
 
     def update_documents(self, docs: list[Document]):
         """Update one or more documents in the pinecone database."""
@@ -95,7 +95,7 @@ class CustomPinecone(Pinecone):
 
     @staticmethod
     def _clean_metadata(relevant_documents: List[Document]) -> List[Document]:
-        meta_fields = ["source", "source_id", "tokens"]
+        meta_fields = ["productDisplayName", "source_id", "tokens"]
         for doc in relevant_documents:
             doc.metadata = {x: doc.metadata.get(x, "") for x in meta_fields}
         return relevant_documents
@@ -104,5 +104,4 @@ class CustomPinecone(Pinecone):
 pinecone = CustomPinecone(
     embedding_function=VectorDatabaseConstants.VECTOR_EMBEDDING.value.embed_query,
     text_key="text",
-    namespace=settings.PINECONE_NAMESPACE,
 )
