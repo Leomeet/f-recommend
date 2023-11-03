@@ -24,7 +24,7 @@ class Settings(BaseSettings):
         case_sensitive = True
 
 class SearchObject(BaseModel):
-    gender: Optional[str] = "All"
+    gender: Optional[List] = ["All"]
     category: Optional[List] = ["All"]
     sub_category: Optional[List] = ["All"]
     article_type: Optional[List] = ["All"]
@@ -36,7 +36,7 @@ class SearchObject(BaseModel):
     
     @property
     def search_query(self):
-        return f"{self.gender} :: {self.join_list(self.category)} :: {self.join_list(self.sub_category)} :: {self.join_list(self.article_type)} :: {self.join_list(self.base_color)} :: {self.join_list(self.season)} :: ___ :: {self.join_list(self.usage)} :: {self.join_list(self.search)}"
+        return f"{self.join_list(self.gender)} :: {self.join_list(self.category)} :: {self.join_list(self.sub_category)} :: {self.join_list(self.article_type)} :: {self.join_list(self.base_color)} :: {self.join_list(self.season)} :: ___ :: {self.join_list(self.usage)} :: {self.join_list(self.search)}"
 
     def join_list(self, values):
         if isinstance(values, list):
