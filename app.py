@@ -11,19 +11,19 @@ st.set_page_config(layout="wide")
 
 def search_recommendations():
     search_object = SearchObject(
-        gender=st.session_state.get("gender",""),
-        category=st.session_state.get("category"),
-        sub_category=st.session_state.get("sub_category"),
-        article_type=st.session_state.get("article_type"),
-        base_color=st.session_state.get("base_color"),
-        season=st.session_state.get("season"),
-        usage=st.session_state.get("usage"),
-        search=st.session_state.get("search"),
+        gender=st.session_state.get("gender",[""]),
+        category=st.session_state.get("category",[""]),
+        sub_category=st.session_state.get("sub_category",[""]),
+        article_type=st.session_state.get("article_type",[""]),
+        base_color=st.session_state.get("base_color",[""]),
+        season=st.session_state.get("season",[""]),
+        usage=st.session_state.get("usage",[""]),
+        search=st.session_state.get("search",[""]),
     )
 
     query = search_object.search_query
 
-    documents = pinecone.search_documents(query,10)
+    documents = pinecone.search_documents(query,20)
 
     for i in range(0, len(documents), 4):
         docs = documents[i:i+4]
